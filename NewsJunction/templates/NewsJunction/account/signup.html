@@ -1,0 +1,49 @@
+{% load socialaccount %}
+{% load i18n %}
+{% load account socialaccount %}
+{% get_providers as socialaccount_providers %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>NewsJunction</title>
+    <style>
+      body {
+        background-color: #343a40;
+      }
+    </style>
+  </head>
+  <body>
+<div class="text-white">
+<div class="container mt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-5 bg-grey p-3">
+      <form class="login" action="{% url 'account_signup' %}" method="post">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <h1 class="h3 mb-3 text-white">Sign Up</h1>
+        <div class="form-wrapper">
+          {{ form.as_p }}
+        </div>      
+        <button class="btn btn-lg btn-primary btn-block text-white" type="submit">Sign Up &raquo;</button>
+      </form>
+      <form class="form-signin" action="{% provider_login_url 'google' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" role="button" aria-pressed="true" class="btn btn btn-danger btn-lg btn-block mt-1">Sign Up with Google</button>
+        {% if not user.is_authenticated %}
+        <p class="mt-2">Already have an account? Then please <a style="color:skyblue;" href="{{ login_url }}">sign in</a>.</p>
+        {% endif %}
+        <p class="text-muted">&copy; 2017-2023</p>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

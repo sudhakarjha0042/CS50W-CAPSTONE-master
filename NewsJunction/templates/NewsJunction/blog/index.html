@@ -1,0 +1,16 @@
+{% extends 'NewsJunction/layout.html' %}
+{% block body %}
+<div id="index">
+  {% for summary in summaries %}
+  <div class="card text-center justify-content-center bg-dark text-white mt-5" style="margin: auto;position: relative;border: 1px dashed #fff;">
+    <img class="card-img-top" src="{{ summary.image }}" onerror="this.src='/static/images/dark final logo.png'" style="height: 55vh;">
+    <div class="card-body">
+      <h5 class="card-title">{{ summary.title }}</h5>
+      <p class="card-text">{{ summary.summary }}</p>
+      <a href="{{ summary.link }}" class="btn btn-primary bg-light text-dark">Details</a>
+      <p class="card-text">{{ summary }}</p><p>hii</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+  {% endblock %}
