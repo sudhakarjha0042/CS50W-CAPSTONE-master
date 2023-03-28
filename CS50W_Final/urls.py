@@ -8,6 +8,13 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.contrib.auth import views as auth_views
 from allauth.account.views import SignupView
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+# ... your URL patterns here ...
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(
@@ -24,3 +31,5 @@ urlpatterns = [
     path('getSummary/', views.getSummary, name='getSummary'),
     path('accounts/', include('allauth.urls')),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
