@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-0%a#awa#c)+_izo2j@7z!djh4erk+gk3@b##gk3wxacz4@@w^+
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.104','127.0.0.1','astoundingly-underground-proton-den-dev.wayscript.cloud','quietly-discrete-force-chateau-dev.wayscript.cloud','absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud']
+ALLOWED_HOSTS = ['192.168.0.104','127.0.0.1','astoundingly-underground-proton-den-dev.wayscript.cloud','quietly-discrete-force-chateau-dev.wayscript.cloud','absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud','walrus-app-g7tjv.ondigitalocean.app']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -124,6 +124,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
-CORS_ORIGIN_WHITELIST = ["https://astoundingly-underground-proton-den-dev.wayscript.cloud","https://absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud"]
-CSRF_TRUSTED_ORIGINS = ["https://astoundingly-underground-proton-den-dev.wayscript.cloud","https://absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud"]
+CORS_ORIGIN_WHITELIST = ["https://astoundingly-underground-proton-den-dev.wayscript.cloud","https://absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud","https://walrus-app-g7tjv.ondigitalocean.app/"]
+CSRF_TRUSTED_ORIGINS = ["https://astoundingly-underground-proton-den-dev.wayscript.cloud","https://absolutely-discrete-tyrannosaurus-hamlet-dev.wayscript.cloud","https://walrus-app-g7tjv.ondigitalocean.app/"]
 
