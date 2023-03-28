@@ -68,6 +68,9 @@ STATICFILES_DIRS = [
     BASE_DIRS / "NewsJunction/static",
 ]
 
+STATIC_ROOT = '/app/CS50W-CAPSTONE-master/static/'
+
+
 MEDIA_ROOT = os.path.join(BASE_DIRS, 'media')
 MEDIA_URL = '/media/'
 
