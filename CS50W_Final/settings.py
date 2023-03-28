@@ -68,7 +68,7 @@ STATICFILES_DIRS = [
     BASE_DIRS / "NewsJunction/static",
 ]
 
-STATIC_ROOT = BASE_DIRS / 'staticfiles'
+STATIC_ROOT = BASE_DIRS / 'NewsJunction/static'
 
 MEDIA_ROOT = os.path.join(BASE_DIRS, 'media')
 MEDIA_URL = '/media/'
