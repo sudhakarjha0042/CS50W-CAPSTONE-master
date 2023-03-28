@@ -5,3 +5,4 @@ gnews
 django-allauth
 django
 newspaper3k
+gunicorn
