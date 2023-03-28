@@ -68,8 +68,6 @@ STATICFILES_DIRS = [
     BASE_DIRS / "NewsJunction/static",
 ]
 
-STATIC_ROOT = BASE_DIRS / 'NewsJunction/static'
-
 MEDIA_ROOT = os.path.join(BASE_DIRS, 'media')
 MEDIA_URL = '/media/'
 
@@ -98,6 +96,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIRS / 'staticfiles'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
