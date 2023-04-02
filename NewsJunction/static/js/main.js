@@ -102,6 +102,7 @@ function fetchsummary() {
 
   
 function fetchNews(input, forwhat) {
+event.preventDefault(); // prevent the form from submitting
 var timeLimit = 50;
 const loadingDiv = document.createElement('div');
 loadingDiv.setAttribute('id', 'loading');
