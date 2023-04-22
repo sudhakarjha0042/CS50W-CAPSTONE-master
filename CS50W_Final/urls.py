@@ -8,9 +8,6 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.contrib.auth import views as auth_views
 from allauth.account.views import SignupView
 
-from django.conf import settings
-from django.conf.urls.static import static
-
 # ... your URL patterns here ...
 
 

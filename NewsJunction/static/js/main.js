@@ -8,8 +8,8 @@ function Play() {
       <div class="card text-center justify-content-center bg-dark text-white mt-5" style="margin: auto;position: relative;border: 1px dashed #fff;">
         <div class="card-body">
           <div class="form-group">
-            <label for="formGroupExampleInput">Example label</label>
-            <input type="text" class="form-control my-2" id="formGroupExampleInput" placeholder="Example input">
+            <label for="formGroupExampleInput">Thank You! For visiting Our Website</label>
+            <input type="text" class="form-control my-2" id="formGroupExampleInput" placeholder="Enter Text Or Url">
             <select class="form-select" name="Choose Language">
             <option selected>Choose Language</option>
             <option value="en">English</option>
