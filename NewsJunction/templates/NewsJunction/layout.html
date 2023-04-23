@@ -18,34 +18,34 @@
       <a class="navbar-brand" href="/">
         <img src="/static/images/dark final logo.png" width="110px" height="20px" alt="News Junction" class="img-fluid">
       </a>        
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler bg-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
           <li class="nav-item">
-            <a class="nav-link"href="#WorldNews" onclick="fetchNews('World','news')">World News</a>
+            <a class="nav-link" href="#WorldNews" onclick="fetchNews('World','news')">World News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Business" onclick="fetchNews('BUSINESS','news')">Business</a>
+            <a class="nav-link" href="#business" onclick="fetchNews('BUSINESS','news')">Business</a>
           </li>
-          <a class="nav-link" href="#Entertainment" onclick="fetchNews('ENTERTAINMENT','news')">Entertainment</a>
+          <a class="nav-link" href="#entertainment" onclick="fetchNews('ENTERTAINMENT','news')">Entertainment</a>
           <li class="nav-item">
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Sports" onclick="fetchNews('SPORTS','news')">Sports</a>
+            <a class="nav-link" href="#sports" onclick="fetchNews('SPORTS','news')">Sports</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Science" onclick="fetchNews('SCIENCE','news')">Science</a>
+            <a class="nav-link" href="#science" onclick="fetchNews('SCIENCE','news')">Science</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Health" onclick="fetchNews('HEALTH','news')">Health</a>
+            <a class="nav-link" href="#health" onclick="fetchNews('HEALTH','news')">Health</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Play" onclick="Play()">Play</a>
+            <a class="nav-link" href="#play" onclick="Play()">Play</a>
           </li>
-          <li class="nav-item m-0 p-0">
-            <a class="nav-link" style="color: #fff;flex-wrap: nowrap;" href="#">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fff;flex-wrap: nowrap;">
           {% if user.is_authenticated %}
               Signed in as <strong>{{ user.username }}</strong>.
           {%endif%}    
@@ -59,7 +59,7 @@
         </form>        
         <form action="{% url 'logout' %}?next=/" method="post">
         {% csrf_token %}
-        <button class="btn btn-outline-white mx-2" type="submit" role="button" aria-pressed="true" class="btn btn btn-danger btn-lg btn-block">Logout</button> 
+        <button class="btn btn-outline-white mx-2 bg-dark text-white" type="submit" role="button" aria-pressed="true" class="btn btn btn-danger btn-lg btn-block">Logout</button> 
         </form> 
       </div>
     </div>
